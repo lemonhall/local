@@ -8,7 +8,7 @@ var wallPostsBroadcast = Link.broadcaster();
 var posts = [];
 var dataProvider = Link.navigator(app.config.dataSource);
 
-// :DEBUG: couchDb's event-stream support is slated for v1.3 -- use the _changes stream for now
+// :TODO: needs a backend
 // var dataUpdates = Link.subscribe(app.config.dataSource);
 // dataUpdates.on('update', function(e) {
 // 	// if our provider ever updates, we should redraw the posts

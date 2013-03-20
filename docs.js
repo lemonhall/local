@@ -3,7 +3,7 @@ var viewNav = document.getElementById('viewer-nav');
 viewNav.querySelector('a[href="'+(window.location.hash||'#readme.md')+'"]').parentNode.classList.add('active');
 
 // request wrapper
-Environment.setDispatchWrapper(function(request, origin, dispatch) {
+Environment.setDispatchWrapper(function(request, origin, dispatch) {	
 	// allow request
 	var response = dispatch(request);
 	response.except(console.log.bind(console));
