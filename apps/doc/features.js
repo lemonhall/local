@@ -110,7 +110,7 @@ function makeDoc(tab, request, content) {
 				'<legend>Links</legend>',
 				'<ul>',
 					'<li><a target=_top href=docs.html title="Documentation">Documentation</a></li>',
-					'<li><a target=_top href=profile.html title="Example Page">Example Page</a></li>',
+					'<li><a target=_top href=//blog.grimwire.com title="Development Blog">Development Blog</a></li>',
 					'<li><a target=_top href=//github.com/pfraze/local title="Github Repository">Github Repository</a></li>',
 					'<li><a target=_top href=//github.com/pfraze/local/issues title="Issue Tracker">Issue Tracker</a></li>',
 				'</ul>'
