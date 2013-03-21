@@ -1,22 +1,17 @@
 ## Local
 
-Local is a client-side application platform. It allows you to run user programs together on the page with permissions-enforcement and thread-isolation, but without sacrificing the richness and performance of the Web.
+Local is a JS toolkit for running multiple applications on the page with Web Workers and HTTP. It allows servers to run in browser threads, where they host HTML and act as proxies to remote services. Because the servers are unable to access the document's namespace, execute inline scripts (due to CSP) or break the message routing policies of the host document, they can be used as containers for untrusted software.
 
-**NOTE! Local is not out of beta, and needs to undergo extensive security auditing before use in production. As the project develops, please let us know about any vulnerabilities or concerns you find in the software. Your feedback is hugely appreciated!**
-
-
-### How does it work?
-
-Local uses Web Workers to isolate applications in separate threads, and Content Security Policies to control which scripts are executed. This (according to my research) provides enough safety to run user applications on the page, but makes it hard for those apps to interact with each other or render to the document. To overcome this limitation, Local emulates HTTP over the Workers's messaging system, allowing applications to address each other, communicate, and serve HTML as remote servers do.
-
-Local also provides a number of tools for developing the applications; more details may be found in the [technical documentation](/pfraze/local/blob/v0.2.0/docs/readme.md).
+#### To learn more, visit the [documentation](http://grimwire.com/local) or the [development blog](http://blog.grimwire.com/#blog.md).
 
 
-### How do I use it?
+## Getting Started
 
-`git clone https://github.com/pfraze/local.git mysite`
-
-Have Apache (or any other Web server) host the `mysite` directory, and you should get the documentation and example pages. Then [work your way through the documentation](/pfraze/local/blob/v0.2.0/docs/readme.md) to learn how to construct the page and its applications.
+```
+git clone https://github.com/pfraze/local.git local
+python -m SimpleHTTPServer
+# navigate browser to localhost:8000/local
+```
 
 
 ## Third-Party Libraries
